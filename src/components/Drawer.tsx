@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import { Home } from '../components/Home';
+import { AddBookmark } from '../components/AddBookmark';
 
 import clsx from 'clsx';
 import { useTheme } from '@material-ui/core/styles';
@@ -92,9 +93,9 @@ function HomeDrawer() {
                         <ListItemText primary="Home" />
                     </ListItem>
 
-                    <ListItem button component={Link} to={'/'}>
+                    <ListItem button component={Link} to={'/addNew'}>
                         <ListItemIcon>
-                            <Tooltip title="More">
+                            <Tooltip title="Add new bookmark">
                                 <NoteAddIcon />
                             </Tooltip>
                         </ListItemIcon>
@@ -109,6 +110,7 @@ function HomeDrawer() {
                         <Switch>
                             <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                             <Route exact path="/" component={Home} />
+                            <Route path="/addNew" component={AddBookmark} />
                             <Redirect from="*" to="/" />
                         </Switch>
                     </div>
