@@ -9,7 +9,7 @@ export const useStylesForDrawer = makeStyles((theme: Theme) =>
             display: 'flex',
         },
         appBar: {
-            backgroundColor: '#b53fac',
+            backgroundColor: '#56408f',
             zIndex: theme.zIndex.drawer + 1,
             transition: theme.transitions.create(['width', 'margin'], {
                 easing: theme.transitions.easing.sharp,

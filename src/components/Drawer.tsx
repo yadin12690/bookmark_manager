@@ -19,7 +19,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
-import BallotIcon from '@material-ui/icons/Ballot';
+import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import { useStylesForDrawer } from './styles/Drawer';
@@ -57,7 +57,7 @@ function HomeDrawer() {
                     </IconButton>
                     <Typography variant="h6" noWrap>
                         Home
-            </Typography>
+                    </Typography>
 
                 </Toolbar>
             </AppBar>
@@ -92,13 +92,13 @@ function HomeDrawer() {
                         <ListItemText primary="Home" />
                     </ListItem>
 
-                    <ListItem button component={Link} to={'/brand'}>
+                    <ListItem button component={Link} to={'/'}>
                         <ListItemIcon>
-                            <Tooltip title="Brands">
-                                <BallotIcon />
+                            <Tooltip title="More">
+                                <NoteAddIcon />
                             </Tooltip>
                         </ListItemIcon>
-                        <ListItemText primary="Brands" />
+                        <ListItemText primary="More" />
                     </ListItem>
                 </List>
 
