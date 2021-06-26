@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import { Home } from '../components/Home';
+import { AddBookmark } from '../components/AddBookmark';
 
 import clsx from 'clsx';
 import { useTheme } from '@material-ui/core/styles';
@@ -19,7 +20,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
-import BallotIcon from '@material-ui/icons/Ballot';
+import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import { useStylesForDrawer } from './styles/Drawer';
@@ -57,7 +58,7 @@ function HomeDrawer() {
                     </IconButton>
                     <Typography variant="h6" noWrap>
                         Home
-            </Typography>
+                    </Typography>
 
                 </Toolbar>
             </AppBar>
@@ -92,13 +93,13 @@ function HomeDrawer() {
                         <ListItemText primary="Home" />
                     </ListItem>
 
-                    <ListItem button component={Link} to={'/brand'}>
+                    <ListItem button component={Link} to={'/addNew'}>
                         <ListItemIcon>
-                            <Tooltip title="Brands">
-                                <BallotIcon />
+                            <Tooltip title="Add new bookmark">
+                                <NoteAddIcon />
                             </Tooltip>
                         </ListItemIcon>
-                        <ListItemText primary="Brands" />
+                        <ListItemText primary="More" />
                     </ListItem>
                 </List>
 
@@ -109,6 +110,7 @@ function HomeDrawer() {
                         <Switch>
                             <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                             <Route exact path="/" component={Home} />
+                            <Route path="/addNew" component={AddBookmark} />
                             <Redirect from="*" to="/" />
                         </Switch>
                     </div>

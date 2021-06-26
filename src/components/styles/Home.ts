@@ -30,10 +30,19 @@ export const useStyles = makeStyles((theme) => ({
         fontFamily: 'Amatic SC',
         display: 'flex',
         justifyContent: 'center',
-        fontSize: '2.5rem',
-        fontWeight: 700,
+        fontSize: '2.7rem',
+        fontWeight: 900,
         color: 'rgb(94, 53, 97)',
         marginTop: '4.5rem'
+    },
+
+    headling: {
+        fontFamily: 'Amatic SC',
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '1.7rem',
+        fontWeight: 700,
+        color: 'rgb(94, 53, 97)'
     },
 
     datePickerDialog: {
