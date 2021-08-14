@@ -24,6 +24,10 @@ import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import { useStylesForDrawer } from './styles/Drawer';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useDispatch } from 'react-redux';
+import { logout } from '../features/userSlice';
+
 
 function HomeDrawer() {
     const { pathname } = useLocation();
@@ -38,7 +42,12 @@ function HomeDrawer() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+    const dispatch = useDispatch();
 
+    const handleLogOut = (e: React.ChangeEvent<any>): void => {
+        e.preventDefault();
+        dispatch(logout());
+    }
 
     return (
         <div className={classes.root}>
@@ -97,6 +106,15 @@ function HomeDrawer() {
                         <ListItemIcon>
                             <Tooltip title="Add new bookmark">
                                 <NoteAddIcon />
+                            </Tooltip>
+                        </ListItemIcon>
+                        <ListItemText primary="More" />
+                    </ListItem>
+
+                    <ListItem button onClick={(e => handleLogOut(e))}>
+                        <ListItemIcon>
+                            <Tooltip title="Log Out">
+                                <ExitToAppIcon />
                             </Tooltip>
                         </ListItemIcon>
                         <ListItemText primary="More" />
