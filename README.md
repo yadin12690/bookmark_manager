@@ -1,3 +1,11 @@
+### `Project Status:`
+
+* Login functionallty with Redux
+* Navigate throw views via matreial-ui drawer.
+* Home component with form to be continued..
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
