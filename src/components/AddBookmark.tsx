@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Container from '@material-ui/core/Container';
-import ReactDOM from 'react-dom';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
@@ -100,4 +99,4 @@ function AddBookmark(): JSX.Element {
 
 
 
-export { AddBookmark };
+export { AddBookmark }
