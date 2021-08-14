@@ -108,7 +108,7 @@ function HomeDrawer() {
                                 <NoteAddIcon />
                             </Tooltip>
                         </ListItemIcon>
-                        <ListItemText primary="More" />
+                        <ListItemText primary="Add more" />
                     </ListItem>
 
                     <ListItem button onClick={(e => handleLogOut(e))}>
@@ -117,7 +117,7 @@ function HomeDrawer() {
                                 <ExitToAppIcon />
                             </Tooltip>
                         </ListItemIcon>
-                        <ListItemText primary="More" />
+                        <ListItemText primary="Log Out" />
                     </ListItem>
                 </List>
 
