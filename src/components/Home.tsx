@@ -17,8 +17,6 @@ function Home(): JSX.Element {
                     <span className={classes.secondTitle}>Welcome {loggedInUser.name} to the bookmark manager</span>
                     <h1 className={classes.headling}>This is your latest bookmarks! enjoy surfing </h1>
                 </div>
-
-
             </Container>
         </>
     );

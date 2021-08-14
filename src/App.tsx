@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       {userStatus ? <HomeDrawer /> : <Login />}
-      <Login />
     </div>
   );
 }
