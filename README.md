@@ -4,6 +4,10 @@
 * Navigate throw views via matreial-ui drawer.
 * Home component with form to be continued..
 
+# CI/CD
+Now its run Github action for CI procces
+TODO:// Add unit test 
+
 
 
 # Getting Started with Create React App
